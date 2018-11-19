@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
     public GameObject end;
+    public GameObject player;
+    public GameObject bullet;
 
     public GameObject deathEffect;
     public void TakeDamage(int damage)
@@ -33,6 +36,18 @@ public class Enemy : MonoBehaviour
         if (col.gameObject.tag == "Floor")
         {
             gameObject.SetActive(false);
+        }
+        if (col.gameObject.tag == "Player")
+        {
+            player = col.gameObject;
+            player.SetActive(false);
+            SceneManager.LoadScene("SampleScene");
+        }
+
+        if (col.gameObject.tag == "Bullet")
+        {
+            bullet = col.gameObject;
+            bullet.SetActive(false);
         }
     }
 }

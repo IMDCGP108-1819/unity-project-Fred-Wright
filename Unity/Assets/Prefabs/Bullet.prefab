@@ -21,12 +21,12 @@ GameObject:
   - component: {fileID: 4987341870407952}
   - component: {fileID: 33709261463965820}
   - component: {fileID: 23204151948826012}
-  - component: {fileID: 50158843057998510}
-  - component: {fileID: 58934234074871398}
   - component: {fileID: 114279936110442726}
-  m_Layer: 0
+  - component: {fileID: 58485007819438816}
+  - component: {fileID: 50510964504981612}
+  m_Layer: 10
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,8 +85,8 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1826867087912578}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!50 &50158843057998510
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!50 &50510964504981612
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -99,14 +99,14 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
---- !u!58 &58934234074871398
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &58485007819438816
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,7 +120,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.49999997
+  m_Radius: 0.1
 --- !u!114 &114279936110442726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,4 +134,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   damage: 20
-  rb: {fileID: 50158843057998510}
+  rb: {fileID: 50510964504981612}

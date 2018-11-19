@@ -7,6 +7,8 @@ TagManager:
   - Falling
   - Floor
   - Top
+  - Bullet
+  - Bottom
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - Player
+  - Bullets
   - 
   - 
   - 
