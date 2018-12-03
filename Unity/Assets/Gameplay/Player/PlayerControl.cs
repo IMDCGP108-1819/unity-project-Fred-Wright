@@ -9,9 +9,11 @@ public class PlayerControl : MonoBehaviour{
 
     void Update()
     {
-        var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+        var move = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
         transform.position += move * speed * Time.deltaTime;
-    }
+
+
+    }    
 
     void OnCollisionEnter2D(Collision2D col)
     {

@@ -17,7 +17,6 @@ public class Laser : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Laser::OnTriggerEnter2D::" + col.gameObject.name);
         Enemy enemy = col.gameObject.GetComponent<Enemy>();
         if (enemy != null)
         {
@@ -28,6 +27,13 @@ public class Laser : MonoBehaviour
         if (genemy != null)
         {
             genemy.TakeDamage(damage);
+            gameObject.SetActive(false);
+        }
+
+        BlackEnemy benemy = col.gameObject.GetComponent<BlackEnemy>();
+        if (benemy != null)
+        {
+            benemy.TakeDamage(damage);
             gameObject.SetActive(false);
         }
         if (col.gameObject.tag == "Top")

@@ -9,8 +9,8 @@ public class Enemy : MonoBehaviour
     public GameObject end;
     public GameObject player;
     public GameObject bullet;
-
     public GameObject deathEffect;
+    public GameObject bottom;
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -31,6 +31,18 @@ public class Enemy : MonoBehaviour
         health = 100;
     }
 
+  /*  void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bottom")
+        {
+            Physics.IgnoreCollision(bottom.collider, collider);
+        }
+    }
+
+    */
+
+
+
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Floor")
@@ -49,5 +61,11 @@ public class Enemy : MonoBehaviour
             bullet = col.gameObject;
             bullet.SetActive(false);
         }
+        if (col.gameObject.tag == "Bottom")
+        {
+            bottom = col.gameObject;
+            Physics2D.IgnoreCollision(bottom.GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
+        }
+        
     }
 }
