@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Laser_Mechanic : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Laser_Mechanic : MonoBehaviour
     public float laserSpawnRate = 0.1f;
     public int MaxLasers = 100;
     public GameObject[] Lasers;
+    public GameObject player;
 
 
 
@@ -35,6 +37,15 @@ public class Laser_Mechanic : MonoBehaviour
                 Lasers[i].SetActive(true);
                 return;
             }
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Falling")
+        {
+            player = col.gameObject;
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 }

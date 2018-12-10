@@ -49,12 +49,6 @@ public class Enemy : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-        if (col.gameObject.tag == "Player")
-        {
-            player = col.gameObject;
-            player.SetActive(false);
-            SceneManager.LoadScene("SampleScene");
-        }
 
         if (col.gameObject.tag == "Bullet")
         {

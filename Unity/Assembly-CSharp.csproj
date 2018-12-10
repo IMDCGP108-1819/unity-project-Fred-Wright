@@ -57,6 +57,8 @@
      <Compile Include="Assets\BlackEnemy.cs" />
      <Compile Include="Assets\Bottom.cs" />
      <Compile Include="Assets\BoxCollision.cs" />
+     <Compile Include="Assets\ButtonHandler.cs" />
+     <Compile Include="Assets\ButtonRestart.cs" />
      <Compile Include="Assets\end.cs" />
      <Compile Include="Assets\Enemy.cs" />
      <Compile Include="Assets\Gameplay\Player\PlayerControl.cs" />
