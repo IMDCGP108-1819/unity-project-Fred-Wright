@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2475acc99cad0d44bb6c1d0e05440053
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - HitSoundClip: {fileID: 8300000, guid: 114f0c3670463224f978f28bdd2281f5, type: 3}
+  - HitSoundSource: {instanceID: 0}
+  - firePoint: {instanceID: 0}
+  - bulletPrefab: {instanceID: 0}
+  - player: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
